@@ -1,8 +1,6 @@
 package cz88
 
 import (
-	// "fmt"
-
 	"github.com/yangtizi/go/sysutils"
 )
 
@@ -58,16 +56,14 @@ func check2(nLeft uint32, nRight uint32, nValue uint32) string {
 
 	// 值比查询的左边还小, 说明值在更左边
 	if AddressList2[nMid].Left > nValue {
-		return check(nLeft, nMid, nValue)
+		return check2(nLeft, nMid, nValue)
 
 	}
 
 	if AddressList2[nMid].Right < nValue {
-		return check(nMid, nRight, nValue)
+		return check2(nMid, nRight, nValue)
 
 	}
 
-	//
-	// fmt.Println("查到了", nMid,  )
 	return AddressList2[nMid].S
 }

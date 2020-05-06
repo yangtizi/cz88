@@ -6,5 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println(cz88.GetAddress("47.56.100.100"))
+	fmt.Println(cz88.GetAddress("47.56.100.100"))  
+	fmt.Println(cz88.GetAddressShort("47.56.100.100"))  
 }
